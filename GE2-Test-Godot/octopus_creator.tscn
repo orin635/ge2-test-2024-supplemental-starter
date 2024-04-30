@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://c60olyrft4b8d"]
+
+[ext_resource type="Script" path="res://octopus_creator.gd" id="1_5156a"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ng4bh"]
+albedo_color = Color(1, 0, 1, 1)
+
+[node name="octopus_creator" type="Node3D"]
+script = ExtResource("1_5156a")
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="."]
+material = SubResource("StandardMaterial3D_ng4bh")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.880651, 0.473765, 0, -0.473765, 0.880651, 0, 2.76035, 5.91224)
