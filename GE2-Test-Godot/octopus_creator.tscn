@@ -1,15 +1,22 @@
-[gd_scene load_steps=3 format=3 uid="uid://c60olyrft4b8d"]
+[gd_scene load_steps=4 format=3 uid="uid://c60olyrft4b8d"]
 
 [ext_resource type="Script" path="res://octopus_creator.gd" id="1_5156a"]
+[ext_resource type="PackedScene" uid="uid://do1dvx5jcteyi" path="res://tentacle.tscn" id="2_o7h84"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ng4bh"]
 albedo_color = Color(1, 0, 1, 1)
 
 [node name="octopus_creator" type="Node3D"]
 script = ExtResource("1_5156a")
+tentacle_scene = ExtResource("2_o7h84")
 
 [node name="CSGSphere3D" type="CSGSphere3D" parent="."]
+radius = 1.5
+radial_segments = 24
 material = SubResource("StandardMaterial3D_ng4bh")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.880651, 0.473765, 0, -0.473765, 0.880651, 0, 2.76035, 5.91224)
+transform = Transform3D(-0.707107, -0.335003, 0.622714, 1.49012e-08, 0.880651, 0.473765, -0.707107, 0.335003, -0.622714, 8, 5.76035, -7.08776)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 8, 0)
