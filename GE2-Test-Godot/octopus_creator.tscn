@@ -11,7 +11,7 @@ script = ExtResource("1_5156a")
 tentacle_scene = ExtResource("2_o7h84")
 
 [node name="CSGSphere3D" type="CSGSphere3D" parent="."]
-radius = 1.5
+radius = 1.4
 radial_segments = 24
 material = SubResource("StandardMaterial3D_ng4bh")
 
